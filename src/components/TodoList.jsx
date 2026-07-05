@@ -1,29 +1,42 @@
 import TodoItem from "./TodoItem";
 
 const TodoList = (props) => {
-  const { tasks = [] } = props;
+  const {
+    tasks = [],
+    filteredTasks,
+    fifirstIncompleteTaskRef,
+    fifirstIncompleteTaskId,
+    onDeleteTaskButtonClick,
+    onTaskCompleteChange,
+  } = props;
 
-  const hasTasks = true;
+  const hasTasks = tasks.length > 0;
+  const isEmptyFilteredTasks = filteredTasks?.length === 0;
 
   if (!hasTasks) {
-    return <div className="todo__empty-message"></div>;
+    return <div className="todo__empty-message">There are no tasks yet</div>;
+  }
+
+  if (hasTasks && isEmptyFilteredTasks) {
+    return <div className="todo__empty-message">Tasks not found</div>;
   }
 
   return (
     <ul className="todo__list">
-      {tasks.map(({ id, title, isDone }) => (
+      {(filteredTasks ?? tasks).map((task) => (
         <TodoItem
-          key={id}
           className="todo__item"
-          id={id}
-          title={title}
-          isDone={isDone}
+          key={task.id}
+          ref={
+            task.id === fifirstIncompleteTaskId
+              ? fifirstIncompleteTaskRef
+              : null
+          }
+          onDeleteTaskButtonClick={onDeleteTaskButtonClick}
+          onTaskCompleteChange={onTaskCompleteChange}
+          {...task}
         />
       ))}
-
-      {/* {tasks.map((task) => {
-        <TodoItem className="todo__item" key={task.id} {...task} />;
-      })} */}
     </ul>
   );
 };
