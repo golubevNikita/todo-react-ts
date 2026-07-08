@@ -1,7 +1,13 @@
+import { TasksProvider } from "./context/TasksProvider";
+
 import Todo from "./components/Todo";
 
 const App = () => {
-  return <Todo />;
+  return (
+    <TasksProvider>
+      <Todo />
+    </TasksProvider>
+  );
 };
 
 export default App;
