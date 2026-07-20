@@ -1,11 +1,1 @@
-{
-  tasks: [
-    { title: "123", isDone: false, id: "GTIiJaorwwI" },
-    { title: "qwe", isDone: true, id: "v9AcXFGlctU" },
-    { title: "1q", isDone: true, id: "HdNtcE9RKuo" },
-    { title: "2w", isDone: false, id: "3cN6JIqJbJY" },
-    { title: "3e", isDone: false, id: "0Z0CtKkQg10" },
-    { title: "1q2w3e", isDone: false, id: "eqHTquynDwc" },
-  ],
-  $schema: "./node_modules/json-server/schema.json",
-}
+{tasks:[{title:'123',isDone:false,id:'GTIiJaorwwI'},{title:'qwe',isDone:false,id:'v9AcXFGlctU'},{title:'1q',isDone:true,id:'HdNtcE9RKuo'},{title:'2w',isDone:true,id:'3cN6JIqJbJY'},{title:'1q2w3e',isDone:false,id:'eqHTquynDwc'},{title:'sdfsdf',isDone:false,id:'TTSblXFzQZs'}],$schema:'./node_modules/json-server/schema.json'}
