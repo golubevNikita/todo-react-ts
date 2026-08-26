@@ -1,9 +1,9 @@
-import { useContext } from "react";
-import { TasksContext } from "@/entities/todo";
+import { useContext } from 'react';
+import { TasksContext } from '@/entities/todo';
 
-import Field from "@/shared/ui/Field";
+import Field from '@/shared/ui/Field';
 
-import styles from "./SearchTaskForm.module.scss";
+import styles from './SearchTaskForm.module.scss';
 
 const SearchTaskForm = () => {
   const { searchQuery, setSearchQuery } = useContext(TasksContext);

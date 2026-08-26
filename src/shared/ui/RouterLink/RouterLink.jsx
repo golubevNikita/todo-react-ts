@@ -3,8 +3,8 @@ const RouterLink = (props) => {
 
   const handleClick = (event) => {
     event.preventDefault();
-    window.history.pushState({}, "", to);
-    window.dispatchEvent(new PopStateEvent("popstate"));
+    window.history.pushState({}, '', to);
+    window.dispatchEvent(new PopStateEvent('popstate'));
   };
 
   return (

@@ -1,11 +1,11 @@
-import styles from "./Field.module.scss";
+import styles from './Field.module.scss';
 
 const Field = (props) => {
   const {
-    className = "",
+    className = '',
     id,
     label,
-    type = "text",
+    type = 'text',
     value,
     error,
     onInput,
@@ -19,7 +19,7 @@ const Field = (props) => {
         {label}
       </label>
       <input
-        className={`${styles.input} ${error ? error.isInvalid : ""}`}
+        className={`${styles.input} ${error ? error.isInvalid : ''}`}
         // className={styles.input, error ? error.isInvalid : ""}
         id={id}
         placeholder=" "

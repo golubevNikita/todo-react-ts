@@ -1,7 +1,7 @@
-const URL = "http://localhost:3001/tasks";
+const URL = 'http://localhost:3001/tasks';
 
 const headers = {
-  "Content-Type": "application/json",
+  'Content-Type': 'application/json',
 };
 
 const tasksAPI = {
@@ -21,14 +21,14 @@ const tasksAPI = {
 
   add: (task) => {
     return fetch(URL, {
-      method: "POST",
+      method: 'POST',
       headers,
       body: JSON.stringify(task),
     }).then((response) => response.json());
   },
 
   delete: (id) => {
-    return fetch(`${URL}/${id}`, { method: "DELETE" });
+    return fetch(`${URL}/${id}`, { method: 'DELETE' });
   },
 
   deleteAll: (tasks) => {
@@ -37,7 +37,7 @@ const tasksAPI = {
 
   toggleComplete: (id, isDone) => {
     return fetch(`${URL}/${id}`, {
-      method: "PATCH",
+      method: 'PATCH',
       headers,
       body: JSON.stringify({ isDone }),
     });

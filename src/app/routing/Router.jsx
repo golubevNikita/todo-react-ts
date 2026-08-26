@@ -1,4 +1,4 @@
-import { matchPaths, useRoute } from "./useRoute";
+import { matchPaths, useRoute } from './useRoute';
 
 const Router = (props) => {
   const path = useRoute();
@@ -25,7 +25,7 @@ const Router = (props) => {
     }
   }
 
-  const NotFound = routes["*"];
+  const NotFound = routes['*'];
 
   return <NotFound />;
 };
