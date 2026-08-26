@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import tasksAPI from "@/shared/api/tasks";
+import { useEffect, useState } from 'react';
+import tasksAPI from '@/shared/api/tasks';
 
 const TaskPage = (props) => {
   const { params } = props;
@@ -29,13 +29,13 @@ const TaskPage = (props) => {
   }
 
   if (hasError) {
-    return <div>{"Task not found("}</div>;
+    return <div>{'Task not found('}</div>;
   }
 
   return (
     <div>
       <h1>{task.title}</h1>
-      <p>{task.isDone ? "Задача выполнена" : "Задача не выполнена"}</p>
+      <p>{task.isDone ? 'Задача выполнена' : 'Задача не выполнена'}</p>
     </div>
   );
 };

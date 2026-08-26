@@ -1,8 +1,8 @@
-import { memo, useContext } from "react";
-import { TasksContext } from "@/entities/todo";
-import RouterLink from "@/shared/ui/RouterLink";
+import { memo, useContext } from 'react';
+import { TasksContext } from '@/entities/todo';
+import RouterLink from '@/shared/ui/RouterLink';
 
-import styles from "./TodoItem.module.scss";
+import styles from './TodoItem.module.scss';
 
 const TodoItem = (props) => {
   const {
@@ -24,7 +24,7 @@ const TodoItem = (props) => {
   return (
     <li
       // className={`todo-item ${className}`}
-      className={`${styles.todoItem} ${disappearingTaskId === id ? styles.isDisappearing : ""} ${appearingTaskId === id ? styles.isAppearing : ""}`}
+      className={`${styles.todoItem} ${disappearingTaskId === id ? styles.isDisappearing : ''} ${appearingTaskId === id ? styles.isAppearing : ''}`}
       ref={id === firstIncompleteTaskId ? firstIncompleteTaskRef : null}
     >
       <input

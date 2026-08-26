@@ -1,15 +1,15 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 
-import AddTaskForm from "@/features/add-task";
-import SearchTaskForm from "@/features/search-task";
-import TodoInfo from "@/features/stats";
+import AddTaskForm from '@/features/add-task';
+import SearchTaskForm from '@/features/search-task';
+import TodoInfo from '@/features/stats';
 
-import { TodoList } from "@/entities/todo";
-import { TasksContext } from "@/entities/todo";
+import { TodoList } from '@/entities/todo';
+import { TasksContext } from '@/entities/todo';
 
-import Button from "@/shared/ui/Button";
+import Button from '@/shared/ui/Button';
 
-import styles from "./Todo.module.scss";
+import styles from './Todo.module.scss';
 
 const Todo = () => {
   const { firstIncompleteTaskRef } = useContext(TasksContext);
@@ -27,7 +27,7 @@ const Todo = () => {
       <Button
         onClick={() =>
           firstIncompleteTaskRef.current?.scrollIntoView({
-            behavior: "smooth",
+            behavior: 'smooth',
           })
         }
       >

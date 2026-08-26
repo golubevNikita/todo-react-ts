@@ -1,7 +1,7 @@
-import { memo, useContext } from "react";
-import { TasksContext, TodoItem } from "@/entities/todo";
+import { memo, useContext } from 'react';
+import { TasksContext, TodoItem } from '@/entities/todo';
 
-import styles from "./TodoList.module.scss";
+import styles from './TodoList.module.scss';
 
 const TodoList = () => {
   const { tasks, filteredTasks } = useContext(TasksContext);

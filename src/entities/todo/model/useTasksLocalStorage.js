@@ -1,8 +1,8 @@
 const useTasksLocalStorage = () => {
-  const savedTasks = localStorage.getItem("tasks");
+  const savedTasks = localStorage.getItem('tasks');
 
   const saveTasks = (tasks) => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem('tasks', JSON.stringify(tasks));
   };
 
   return {
