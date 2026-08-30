@@ -14,8 +14,6 @@ export const TasksProvider = (props) => {
     deleteAllTasks,
     toggleTaskComplete,
 
-    newTaskTitle,
-    setNewTaskTitle,
     searchQuery,
     setSearchQuery,
     newTaskInputRef,
@@ -35,8 +33,6 @@ export const TasksProvider = (props) => {
       deleteAllTasks,
       toggleTaskComplete,
 
-      newTaskTitle,
-      setNewTaskTitle,
       searchQuery,
       setSearchQuery,
       newTaskInputRef,
@@ -54,8 +50,6 @@ export const TasksProvider = (props) => {
       deleteAllTasks,
       toggleTaskComplete,
 
-      newTaskTitle,
-      setNewTaskTitle,
       searchQuery,
       setSearchQuery,
       newTaskInputRef,
