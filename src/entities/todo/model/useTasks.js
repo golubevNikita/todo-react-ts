@@ -38,7 +38,6 @@ const tasksReducer = (state, action) => {
 const useTasks = () => {
   const [tasks, dispatch] = useReducer(tasksReducer, []);
 
-  const [newTaskTitle, setNewTaskTitle] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [disappearingTaskId, setDisappearingTaskId] = useState(null);
   const [appearingTaskId, setАppearingTaskId] = useState(null);
@@ -77,10 +76,8 @@ const useTasks = () => {
     [],
   );
 
-  const addTask = useCallback((title) => {
+  const addTask = useCallback((title, callbackAfterAdding) => {
     const newTask = {
-      // id: crypto?.randomUUID() ?? Date.now().toString(),
-      // id генерит сервер
       title,
       isDone: false,
     };
@@ -90,7 +87,7 @@ const useTasks = () => {
 
       // избавились от обращения к state-переменной tasks,
       // поэтому теперь не нужно указывать tasks в массиве зависимостей
-      setNewTaskTitle('');
+      callbackAfterAdding();
       setSearchQuery('');
 
       newTaskInputRef.current.focus();
@@ -128,8 +125,6 @@ const useTasks = () => {
     deleteAllTasks,
     toggleTaskComplete,
 
-    newTaskTitle,
-    setNewTaskTitle,
     searchQuery,
     setSearchQuery,
     newTaskInputRef,

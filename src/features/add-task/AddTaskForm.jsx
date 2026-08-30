@@ -7,8 +7,9 @@ import Field from '@/shared/ui/Field';
 import styles from './AddTaskForm.module.scss';
 
 const AddTaskForm = () => {
-  const { addTask, newTaskTitle, setNewTaskTitle, newTaskInputRef } =
-    useContext(TasksContext);
+  const [newTaskTitle, setNewTaskTitle] = useState('');
+
+  const { addTask, newTaskInputRef } = useContext(TasksContext);
 
   const [error, setError] = useState('');
 
@@ -19,7 +20,7 @@ const AddTaskForm = () => {
     event.preventDefault();
 
     if (!isNewTaskTitleEmpty) {
-      addTask(clearNewTaskTitle);
+      addTask(clearNewTaskTitle, () => setNewTaskTitle(''));
     }
   };
 
